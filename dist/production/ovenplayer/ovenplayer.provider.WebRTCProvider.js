@@ -16,7 +16,18 @@
 /**
  * Created by hoho on 2018. 8. 24..
  */
-t.getBrowser=function(){if(-1!=(navigator.userAgent.indexOf("Opera")||navigator.userAgent.indexOf("OPR")))return"opera";if(-1!=navigator.userAgent.indexOf("Chrome"))return"chrome";if(-1!=navigator.userAgent.indexOf("Safari"))return"safari";if(-1!=navigator.userAgent.indexOf("Firefox"))return"firefox";if(-1!=navigator.userAgent.indexOf("MSIE")){var e=avigator.userAgent.indexOf("MSIE");return 1==!!document.documentMode?"ie":navigator.userAgent.match(/Trident.*rv\:11\./)?isNaN(parseInt(ua.substring(e+5,ua.indexOf(".",e))))?"unknown":"ie":"unknown"}return"unknown"};
+t.getBrowser=function(){if(-1!=(navigator.userAgent.indexOf("Opera")||navigator.userAgent.indexOf("OPR")))return"opera";if(-1!=navigator.userAgent.indexOf("Chrome"))return"chrome";if(-1!=navigator.userAgent.indexOf("Safari"))return"safari";if(-1!=navigator.userAgent.indexOf("Firefox"))return"firefox";if(-1!=navigator.userAgent.indexOf("MSIE")){navigator.userAgent.indexOf("MSIE");
+/*if(!!document.documentMode == true ){
+            return 'ie';
+        }else if(!!navigator.userAgent.match(/Trident.*rv\:11\./)){
+            if (!isNaN(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))))) {
+                return 'ie';
+            }else{
+                return 'unknown';
+            }
+        }else{
+            return 'unknown';
+        }*/return function(){for(var e=3,t=document.createElement("div"),r=t.getElementsByTagName("i");t.innerHTML="\x3c!--[if gt IE "+ ++e+"]><i></i><![endif]--\x3e",r[0];);return e>4?e:void 0}()<9?"oldIE":"modernIE"}return"unknown"};
 /***/},
 /***/76:
 /***/function(e,t,r){e.exports=r.p+"OvenPlayerFlash.swf";
