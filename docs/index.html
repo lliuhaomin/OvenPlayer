@@ -24,10 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Demo</a>
+                        <a class="nav-link" href="index.html">Player Demo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ome_demo.html">OME Demo</a>
+                        <a class="nav-link" href="ome_demo.html">Ultra Low Latency Demo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/AirenSoft/OvenPlayer" target="_blank">GitHub</a>
@@ -220,7 +220,7 @@ player = OvenPlayer.create("player", {
                     this.sources.push({
                         id : this.sourceId ++,
                         file : this.url,
-                        type : this.choicedProtocol
+                        type : this.choicedProtocol === "http" ? "mp4" : this.choicedProtocol
                     });
                     this.errorMessage = "";
                     this.choicedProtocol = "Protocol";
